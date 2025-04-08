@@ -1,0 +1,26 @@
+{
+    "enabled": "true",
+    "increase-coverage": {
+      "project-name": "nestjs-project-structure",
+      "target-branches": [
+        "main"
+      ],
+      "test-env-docker-stage": "test",
+      "build-test-env-docker-stage-script-path": "tool/build-test-env-docker-stage.sh",
+      "test-files-folders": [
+        "test"
+      ],
+      "source-test-file-paths": [
+        {
+          "source-file-path": "src/app.module.ts",
+          "test-file-path": "test/test.spec.ts"
+        }
+      ],
+      "test-command": "npm run test -- --coverage",
+      "coverage-type": "lcov",
+      "code-coverage-report-path": "coverage/lcov.info",
+      "desired-coverage": 90,
+      "max-iterations": 1,
+      "max-number-of-test-cases": 6
+    }
+}
